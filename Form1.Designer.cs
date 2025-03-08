@@ -92,6 +92,7 @@
             WithdrawBtn.TabIndex = 5;
             WithdrawBtn.Text = "Withdraw";
             WithdrawBtn.UseVisualStyleBackColor = true;
+            WithdrawBtn.Click += WithdrawBtn_Click;
             // 
             // label2
             // 

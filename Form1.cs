@@ -38,7 +38,20 @@ namespace BankAccountApp2
 
             RefreshGrid();
             NumAmount.Value = 0;
-            
+
         }
+
+        private void WithdrawBtn_Click(object sender, EventArgs e)
+        {
+            BankAccount SelectedAccount = AccountsGrid.SelectedRows[0].DataBoundItem as BankAccount;
+            string msg = SelectedAccount.Withdraw(NumAmount.Value);
+            MessageBox.Show(msg);
+
+
+            RefreshGrid();
+            NumAmount.Value = 0;
+        }
+       
+
     }
 }
