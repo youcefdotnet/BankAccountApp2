@@ -72,6 +72,7 @@
             CreateAccountBtn.TabIndex = 3;
             CreateAccountBtn.Text = "Create Account";
             CreateAccountBtn.UseVisualStyleBackColor = true;
+            CreateAccountBtn.Click += CreateAccountBtn_Click;
             // 
             // DepositBtn
             // 
@@ -81,6 +82,7 @@
             DepositBtn.TabIndex = 4;
             DepositBtn.Text = "Deposit";
             DepositBtn.UseVisualStyleBackColor = true;
+            DepositBtn.Click += DepositBtn_Click;
             // 
             // WithdrawBtn
             // 
@@ -96,13 +98,13 @@
             label2.AutoSize = true;
             label2.Location = new Point(22, 267);
             label2.Name = "label2";
-            label2.Size = new Size(48, 15);
+            label2.Size = new Size(57, 15);
             label2.TabIndex = 6;
-            label2.Text = "Owner :";
+            label2.Text = "Amount :";
             // 
             // NumAmount
             // 
-            NumAmount.Location = new Point(69, 265);
+            NumAmount.Location = new Point(78, 265);
             NumAmount.Maximum = new decimal(new int[] { 9999999, 0, 0, 0 });
             NumAmount.Minimum = new decimal(new int[] { 9999999, 0, 0, int.MinValue });
             NumAmount.Name = "NumAmount";

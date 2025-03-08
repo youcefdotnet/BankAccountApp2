@@ -22,10 +22,13 @@ namespace BankAccountApp2
 
         public string Deposit(decimal amount)
         {
-            if (amount > 20000)
-                MessageBox.Show("ANti Laundry Law prohibit a deposit of such amount");
+
             if (amount <= 0)
-                MessageBox.Show("nothing to deposit");
+                return "nothing to deposit";
+
+            if (amount > 20000)
+            return "ANti Laundry Law prohibit a deposit of such amount";  
+                                  
             Balance += amount;
             return "Deposit made successfully";
         }
