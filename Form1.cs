@@ -15,10 +15,16 @@ namespace BankAccountApp2
                 MessageBox.Show("Owner is empty or null");
                 return;
             }
+            if (InterestNum.Value >0)
+                bankaccounts.Add(new SavingAccount((OwnerTxt.Text), InterestNum.Value));
+            
             else
+            {
                 bankaccounts.Add(new BankAccount(OwnerTxt.Text));
+            }
             RefreshGrid();
             OwnerTxt.Text = string.Empty;
+            InterestNum.Value = 0;
         }
 
         public void RefreshGrid()

@@ -36,8 +36,11 @@
             WithdrawBtn = new Button();
             label2 = new Label();
             NumAmount = new NumericUpDown();
+            label3 = new Label();
+            InterestNum = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)AccountsGrid).BeginInit();
             ((System.ComponentModel.ISupportInitialize)NumAmount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)InterestNum).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -66,7 +69,7 @@
             // 
             // CreateAccountBtn
             // 
-            CreateAccountBtn.Location = new Point(69, 61);
+            CreateAccountBtn.Location = new Point(69, 98);
             CreateAccountBtn.Name = "CreateAccountBtn";
             CreateAccountBtn.Size = new Size(169, 34);
             CreateAccountBtn.TabIndex = 3;
@@ -112,11 +115,31 @@
             NumAmount.Size = new Size(120, 23);
             NumAmount.TabIndex = 7;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(13, 61);
+            label3.Name = "label3";
+            label3.Size = new Size(66, 15);
+            label3.TabIndex = 8;
+            label3.Text = "Inter. Rate :";
+            // 
+            // InterestNum
+            // 
+            InterestNum.Location = new Point(78, 59);
+            InterestNum.Maximum = new decimal(new int[] { 9999999, 0, 0, 0 });
+            InterestNum.Minimum = new decimal(new int[] { 9999999, 0, 0, int.MinValue });
+            InterestNum.Name = "InterestNum";
+            InterestNum.Size = new Size(71, 23);
+            InterestNum.TabIndex = 9;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(651, 294);
+            Controls.Add(InterestNum);
+            Controls.Add(label3);
             Controls.Add(NumAmount);
             Controls.Add(label2);
             Controls.Add(WithdrawBtn);
@@ -130,6 +153,7 @@
             Text = "Bank Accounts Manager";
             ((System.ComponentModel.ISupportInitialize)AccountsGrid).EndInit();
             ((System.ComponentModel.ISupportInitialize)NumAmount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)InterestNum).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -144,5 +168,7 @@
         private Button WithdrawBtn;
         private Label label2;
         private NumericUpDown NumAmount;
+        private Label label3;
+        private NumericUpDown InterestNum;
     }
 }

@@ -10,9 +10,25 @@ namespace BankAccountApp2
     {
         public decimal InterestRate { get; set; }
 
-        public SavingAccount(string owner, decimal interestrate): base(owner)
+        public SavingAccount(string owner, decimal interestrate): base(owner+ " (% "+ interestrate+")")
         {
             InterestRate = interestrate;
         }
+
+        public override string Deposit(decimal amount)
+        {
+
+            if (amount <= 0)
+                return "nothing to deposit";
+
+            if (amount > 20000)
+                return "ANti Laundry Law prohibit a deposit of such amount";
+
+            decimal amountinterest = amount *InterestRate/100;
+            Balance += amount + amountinterest;
+
+            return "Deposit made successfully";
+        }
+
     }
 }

@@ -20,7 +20,7 @@ namespace BankAccountApp2
 
         }
 
-        public string Deposit(decimal amount)
+        public virtual string Deposit(decimal amount)
         {
 
             if (amount <= 0)
